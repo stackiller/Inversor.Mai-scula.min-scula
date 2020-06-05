@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 /* Simples conversor de maiúsculas,
  * minúsculas e vice-versa */
@@ -15,7 +16,7 @@ toLower(char ch) {
 int
 main(int argc, char **argv) {
   for(int s=1; s < argc; s++) {
-    for(int j=0; j < argv[s][j]; j++)
+    for(int j=0; j < strlen(argv[s]); j++)
       printf("%c", toLower(argv[s][j]));
     putchar(32);
   }
