@@ -1,26 +1,41 @@
-## Inverte, Maiúsculas e minúsculas.
+## Inverte Maiúsculas para  minúsculas e vice-versa.
 
-É bobo, mas quebra um galho quando precisar ...
+### atenção: funciona somente com o padrão ascii.
 
+#### Primeiro, compile:
 
-Crie um diretório para o binário, pode ser na home, talvez .tools:
+```sh
+$ cc upper_lower_case.c -o <output> -Wall
+```
+
+#### Crie um diretório para o binário, de preferência na home, chamado ".tools":
 ```sh
 $ mkdir ~/.tools
 ```
 
-Mova o binário para lá
+#### Moa o binário para lá:
 ```sh
 $ mv <binário> ~/.tools
 ```
 
-Abra o .bashrc e exporte o caminho do binário:
+#### Abra o arquivo ".bashrc", que está na home, e exporte o caminho do binário:
 ```sh
 $ export PATH=$HOME/.tools
 ```
-
-Agora recarregue seu .bashrc:
+#### Agora recarregue seu .bashrc:
 ```sh
 $ source ~/.bashrc
 ```
 
-Agora dá para invocar ele pela linha de comando, independente do diretório ;)
+## Formas de usar:
+
+### fornecendo o texto diretamente: 
+```sh
+$ upper_lower_case "Qualquer texto"
+```
+### ou a saída de um arquivo:
+```sh
+$ upper_lower_case $(cat texto.de.exemplo)
+```
+Bom proveito .__."
+
